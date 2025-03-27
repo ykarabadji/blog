@@ -32,7 +32,7 @@ Start the server:
 
 ⚙️ Usage
 
-    Open http://localhost:3636 in your browser.
+    Open http://localhost:3000 in your browser.
 
     Register or log in to create posts.
 
@@ -45,7 +45,13 @@ Start the server:
     Express.js (Server)
 
     Prisma (Database ORM)
-
     HTML, CSS, JavaScript (Frontend)
+    
+CREATE YOUR OWN .env FILE that contains :
+    DATABASE_URL=your_database_url_here
+    JWT_SECRET=your_secret_key_here
+    PORT=3000
+
+    
 
 

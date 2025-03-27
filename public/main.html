@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shadcn/ui@latest/dist/style.css">
+    <style>
+        .post-container {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .post-container:hover {
+        transform: scale(1.02);
+    }
+    
+    .post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .post-date {
+        font-size: 12px;
+        color: gray;
+    }
+    
+    .post-content {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+    }
+    
+    .post-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .edit-btn, .delete-btn {
+        border: none;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    
+    .edit-btn {
+        background-color: #3498db;
+        color: white;
+    }
+    
+    .delete-btn {
+        background-color: #e74c3c;
+        color: white;
+    }
+    
+    .edit-btn:hover {
+        background-color: #2980b9;
+    }
+    
+    .delete-btn:hover {
+        background-color: #c0392b;
+    }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    
+    <div class="w-full max-w-3xl p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Blog Posts</h1>
+        
+        <!-- Create Post Section -->
+        <div id="main-con" class="bg-gray-50 p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-gray-700">Create a Post</h2>
+            <input type="text" id="postTitle" class="w-full mt-2 p-2 border rounded-md focus:ring focus:ring-indigo-300" placeholder="Post Title">
+            <textarea id="postContent" class="w-full mt-2 p-2 border rounded-md focus:ring focus:ring-indigo-300" placeholder="Write your post..."></textarea>
+            <button id="submit-button" onclick="handle_Post(event)" class="mt-3 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg shadow">Publish</button>
+        </div>
+    
+        <!-- Posts Container -->
+        <div id="postsContainer" class="mt-6 space-y-4"></div>
+    </div>
+    
+    <script src="posts.js"></script>
+    <script src="comments.js"></script>
+</body>
+</html>
